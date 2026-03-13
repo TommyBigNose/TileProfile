@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Threading;
 using TileProfile.Library.Models;
@@ -14,9 +15,13 @@ public partial class MainWindow : Window
     private DispatcherTimer _timer;
     private List<WindowProfile> _windowProfiles;
     
+    
     public MainWindow()
     {
         InitializeComponent();
+        
+        // InputElement.KeyDownEvent.AddClassHandler<TopLevel>(ApplyBox, handledEventsToo: true);
+        
         
         // _timer = new DispatcherTimer();
         // _timer.Interval = TimeSpan.FromMilliseconds(200);
