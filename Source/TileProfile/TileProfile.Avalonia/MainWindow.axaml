@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
+        Width="800" Height="800"
+        x:Class="TileProfile.Avalonia.MainWindow"
+        Title="TileProfile">
+        
+        <!-- <Panel Name="SpMain" HorizontalAlignment="Left"> -->
+        <!--         ~1~Profile area@1@ -->
+        <!--         <TextBlock Name="TextProfiles" Margin="10,10,0,0" HorizontalAlignment="Left">Profiles</TextBlock> -->
+        <!--         <ComboBox Name="CbProfiles" Margin="10,30,0,0" HorizontalAlignment="Left" SelectedIndex="0" Width="150" > -->
+        <!--                 <ComboBoxItem>Default Profile 1</ComboBoxItem> -->
+        <!--         </ComboBox> -->
+        <!--          -->
+        <!--         ~1~Box editing section@1@ -->
+        <!--         <TextBlock Name="TextBoxSection" Margin="10,70,0,0">X,Y,Width,Height (new line delimited)</TextBlock> -->
+        <!--          -->
+        <!--          -->
+        <!--          -->
+        <!--          -->
+        <!--         <TextBox Name="TbAllBoxes" Margin="10,-160,0,0" Width="150" Height="250" -->
+        <!--                  HorizontalAlignment="Left"></TextBox> -->
+        <!--          -->
+        <!--         <TextBox Name="TbAllProcesses" Margin="170,-160,0,0" Width="250" Height="250" -->
+        <!--                  HorizontalAlignment="Left" IsReadOnly="True"></TextBox> -->
+        <!--          -->
+        <!--         <Button Name="BtnSave" Margin="10,200,0,0" Click="SaveProfile">Save</Button> -->
+        <!--         <Button Name="BtnUndo" Margin="70,200,0,0" Click="UndoProfile">Undo</Button> -->
+        <!-- </Panel> -->
+        
+        <StackPanel Name="SpMain" HorizontalAlignment="Left">
+        
+                <!--Profile area-->
+                <Panel>
+                        <TextBlock Name="TextProfiles" Margin="10,10,0,0">Profiles</TextBlock>
+                        <ComboBox Name="CbProfiles" Margin="10,30,0,0" SelectedIndex="0" Width="150" >
+                                <ComboBoxItem>Default Profile 1</ComboBoxItem>
+                        </ComboBox>
+                </Panel>
+        
+                <!--Box editing section-->
+                <!-- <TextBlock Name="TextNumBoxes" Margin="10,10,0,0"># of Boxes</TextBlock> -->
+                <!-- <NumericUpDown Name="NudNumBoxes" Margin="10,10,0,0" -->
+                <!--                Width="150" Minimum="1" Maximum="10" Increment="1" -->
+                <!--                Value="1" FormatString="0" ValueChanged="SetNumberOfBoxes"></NumericUpDown> -->
+                <Panel>
+                        <TextBlock Name="TextBoxSection" Margin="10,10,0,0"
+                                   HorizontalAlignment="Left">X,Y,Width,Height (new line delimited)</TextBlock>
+                        
+                        <TextBox Name="TbAllBoxes" Margin="10,30,0,0"
+                                 HorizontalAlignment="Left" Width="200" Height="250"></TextBox>
+                        <!-- <TextBox Name="TbAllProcesses" Margin="220,30,0,0" Width="400" Height="250" -->
+                        <!--          HorizontalAlignment="Left" IsReadOnly="True"></TextBox> -->
+                        <ListBox Name="LbAllProcesses" Margin="220, 30,0,0" Width="400"></ListBox>
+                </Panel>
+                <Panel Margin="0,10,0,0">
+                        <Button Name="BtnSave" Margin="10,10,0,0" Click="SaveProfile">Save</Button>
+                        <Button Name="BtnUndo" Margin="70,10,0,0" Click="UndoProfile">Undo</Button>
+                        <Button Name="BtnApplyBox" Margin="130,10,0,0" Click="ApplyBox" HotKey="Alt+D1">Apply</Button>
+                </Panel>
+
+        
+        </StackPanel>
+        
+        
+</Window>
